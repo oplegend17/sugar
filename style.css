@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courgette&family=Kumbh+Sans:wght@100;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Macondo+Swash+Caps&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Righteous&family=Roboto:wght@100;300;400;500;700;900&family=Satisfy&family=Ubuntu:wght@300;400;500;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main: #bfa065;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: #808080;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(https://images01.nicepage.com/1e/a1/1ea150a80b55b574e9ed5ca2338302fa.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    min-height: fit-content;
+}
+
+.btn-main {
+    padding: 1rem 4rem;
+    border: 2px solid var(--main);
+    color: #808080;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    transition: all .3s ease;
+}
+
+.btn-main:hover {
+    background-color: var(--main);
+    color: #fff;
+    border: 2px solid #c19a51;
+}
+
+.hero h1 {
+    font-size: 10rem;
+    color: var(--main);
+    font-weight: 900;
+}
+
+.hero p {
+    margin: 2.5rem 0;
+}
+
+.hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 1000px;
+}
+
+#cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    background-color: #f2f2f2;
+}
+
+.cards-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    margin: 2rem 2rem;
+    transform: translateY(-100px);
+}
+
+.cards-box img {
+    width: 70px;
+    color: #bfa065;
+}
+
+.cards-box h1 {
+    font-size: 2.3rem;
+    margin: 2rem;
+}
+
+/* Recipe */
+#recipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 6rem 0;
+}
+
+.recipe-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 750px;
+    padding: 0 2rem;
+}
+
+.recipe-header h1 {
+    font-size: 4rem;
+}
+
+.recipe-header p {
+    margin: 2rem 0;
+    color: #1f1f1f;
+}
+
+.recipe {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+
+.recipe-box {
+    width: calc(33.3% - 2rem);
+    height: 310px;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.recipe-box-desc {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all .4s ease;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5256477591036415) 6%, rgba(191, 160, 101, 1) 89%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recipe-box-desc a{
+    padding: 1rem 1.5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    border: 2px solid #fff;
+    position: relative;
+    transition: all .3s ease;
+    z-index: 2;
+    transform: translateY(100px);
+}
+.recipe-box-desc a::after{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    content: '';
+    left: 0;
+    top: 0;
+    transition: all .3s ease;
+    z-index: -1;
+}
+.recipe-box:hover .recipe-box-desc a{
+    transform: translateY(0);
+}
+.recipe-box-desc a:hover::after{
+    width: 100%;
+}
+.recipe-box-desc a:hover{
+    color: #bfa065;
+}
+.recipe-box:hover .recipe-box-desc {
+    opacity: 1;
+}
+
+.recipe-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Ideas */
+#ideas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 6rem 0;
+    background-color: #1111;
+}
+.ideas-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 1000px;
+    margin-bottom: 4rem;
+}
+.ideas-header h1{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+.ideas-header p{
+    color: #1f1f1f;
+}
+.ideas{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+.ideas-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 2rem;
+    width: 300px;
+}
+.ideas-box h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+/* Snacks */
+#snacks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+.snacks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.snacks-box{
+    width: 256px;
+    height: 280px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem 1.5rem;
+    padding: 1.5rem;
+}
+.snacks-box:nth-child(2) , .snacks-box:nth-child(4){
+    border: 3px solid #bfa065;
+}
+.snacks-box h1{
+    font-size: 2.3rem;
+}
+.snacks-box p{
+    margin-top: 2rem;
+}
+.snacks-box-img{
+    background-image: url(https://images01.nicepage.com/a2/fc/a2fc4ef890f44fa0a9bb7787ce17008d.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.snacks-box-img:nth-child(3){
+    background-image: url(https://images01.nicepage.com/62/43/6243854162c536333ab218a58996077f.jpeg);
+}
+/* health */
+#health{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+}
+.health-img{
+    background-image: url(https://images01.nicepage.com/12/1d/121de0006b4b7c60c37dc95d75299cb3.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+}
+.health-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 0 4.5rem;
+    background-color: #1111;
+    height: 100%;
+}
+.health{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+.health h1{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.health a{
+    margin-top: 2rem;
+}
+/* Footer */
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 6rem 3rem;
+}
+.footer-main{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 0 2rem;
+    width: 500px;
+}
+.footer-main h1{
+    font-size: 4rem;
+}
+.footer-main p{
+    color: #fff;
+    margin: 2rem 0;
+}
+.footer-box-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-box{
+    margin: 0 2rem;
+}
+.footer-box h1{
+    font-size: 1.5rem;
+    color: #d4d4d4;
+}
+.footer-box h2{
+    font-size: 2.5rem;
+    margin-top: .5rem;
+}
+@media screen and (max-width:1250px) {
+    .recipe {
+        width: 100%;
+    }
+    .ideas-box {
+        width: 250px;
+    }
+    .ideas-header {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .hero h1 {
+        font-size: 7rem;
+    }
+    .snacks-box {
+        width: 210px;
+    }
+    .footer-box-main{
+        flex-wrap: wrap;
+    }
+    .footer-box{
+        margin: 2rem 2rem;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .hero h1 {
+        font-size: 6rem;
+    }
+    .ideas {
+      flex-wrap: wrap;
+    }
+    .ideas-box {
+        width: 40%;
+        margin: 3rem 0;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .hero {
+        width: 90%;
+    }
+    .snacks-box{
+        width: 350px;
+    }
+    .footer-box-main{
+     margin: 3rem 0;  
+    }
+    #footer{
+        flex-direction: column;
+    }
+    .footer-main{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .recipe-box {
+        width: calc(50% - 2rem);
+
+    }
+}
+
+@media screen and (max-width:800px) {
+    .recipe-header {
+        width: auto;
+        padding: 0 3rem;
+    }
+    .ideas-box {
+        width: 50%;
+    }
+    .snacks-box{
+        width: 300px;
+    }
+    #health{
+        flex-direction: column;
+        height: auto;
+    }
+    .health-img{
+        width: 100%;
+        height: 300px;
+    }
+    .health-main{
+        width: 100%;
+        padding: 4rem 3rem;
+    }
+    .health h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .snacks-box{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .snacks-box{
+        width: 90%;
+    }
+    .footer-box-main {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .cards-box {
+        width: 80%;
+    }
+
+    .recipe-header h1 {
+        font-size: 3rem;
+    }
+
+    .recipe-box {
+        width: 90%;
+        height: auto;
+    }
+    .ideas-box {
+        width: 90%;
+    }
+    .footer-main {
+        width: 100%;
+    }
+    #footer {
+        padding: 6rem 1rem;
+    }
+    .footer-main h1{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .cards-box {
+        width: 90%;
+    }
+    .ideas-box {
+        width: 95%;
+    }
+    .ideas-header h1 {
+        font-size: 3rem;
+    }
+    .health-main{
+        padding: 4rem 2rem;
+    }
+    .health h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (max-width:300px) {}
+
+@media screen and (max-width:200px) {}
